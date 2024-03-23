@@ -1,0 +1,26 @@
+{% extends 'forgotpswd.html' %}
+
+{% block title %}
+    <title style="color: red;">Error</title>
+{% endblock %}
+
+{% block body_block %}
+    <div class="card">
+        <div class="card-body">
+            <form method = 'POST'>
+                {% csrf_token %}
+                <label for="un">User Name</label>
+                <input type="text" id="un" name="un">
+                <br><br>
+                <label for="ps">New Password</label>
+                <input type="password" id="ps" name="ps">
+                <br><br>
+                <label for="rps">Re-enter Password</label>
+                <input type="password" id="rps" name="rps">
+                <br><br>
+                <h4 style="color: red;">Invalid !!</h4>
+                <a href="{% url 'forgotpswd' %}">Forgot Password</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}

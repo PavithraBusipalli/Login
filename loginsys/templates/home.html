@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Home</title>
+{% endblock %}
+
+{%  block body_block %}
+    <div class="card border-primary" style="margin-left:25px; margin-top:200px;margin-left:35%;margin-right:35%;">
+        <div class="card-body">
+            <center>
+                {% if user.is_authenticated %}
+                <h2>Welcome {{un}}..!</h2>
+                {% else %}
+                <h2>Welcome all..!!!</h2>
+                {% endif %}
+            </center>
+        </div>
+    </div>
+{% endblock %}

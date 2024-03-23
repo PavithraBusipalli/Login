@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Forgot Password</title>
+{% endblock %}
+
+{% block body_block %}
+    <div class="card">
+        <div class="card-body">
+            <form method = 'POST'>
+                {% csrf_token %}
+                <label for="un">User Name</label>
+                <input type="text" id="un" name="un">
+                <br>
+                <label for="ps">New Password</label>
+                <input type="password" id="ps" name="ps">
+                <br>
+                <label for="rps">Re-enter Password</label>
+                <input type="password" id="rps" name="rps">
+                <br>
+                <input type="submit" value="Forgot Password">
+            </form>
+        </div>
+    </div>
+{% endblock %}

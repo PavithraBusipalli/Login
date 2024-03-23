@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Login</title>
+{% endblock %}
+
+{% block body_block %}
+        <div class="card border-primary" style="margin-left:35%;margin-right:35%; margin-top:200px;">
+            <div class="card-body">
+                <center><h4 class="card-title">Login </h4></center>
+                <form method = 'POST'>
+                    {% csrf_token %}
+                    <label for="un" style="font-weight: bold;">Username</label>
+                    <input type="text" id="un" name="un" class="form-control">
+                    <br><br>
+                    <label for="pswd" style="font-weight: bold;">Password</label>
+                    <input type="password" id="pswd" name="pswd" class="form-control">
+                    <br><br>
+                    <center><button type="submit" class="btn btn-primary" style="font-weight: bold;font-style:italic">Login</button></center>
+                </form>
+            </div>
+        </div>
+{% endblock %}
